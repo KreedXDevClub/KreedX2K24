@@ -39,41 +39,41 @@
   </section>
 
 
-  <div class="col-12 row m-0 p-0 d-none mobileX vh-100">
+  <div class="col-12 mobileX vh-100 m-0 p-0">
 
     <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Hello MF</h1>
       </div>
     </section>
 
 
     <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>
     </section>
 
     <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>
     </section>
 
     <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>
     </section>
 
     <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>
     </section>
 
     <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>
     </section>
