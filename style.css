@@ -3,7 +3,7 @@ body {
   /* Remove body margin */
   padding: 0;
   /* Remove body padding */
-  
+
 
   background: linear-gradient(to right, rgb(154, 0, 0), rgb(112, 0, 0), rgb(48, 0, 0), rgb(16, 0, 0), black);
 
@@ -37,7 +37,7 @@ body {
   scrollbar-width: none;
 }
 
-.welcomeX{
+.welcomeX {
   position: absolute;
   z-index: -1;
   margin-top: -300px;
@@ -56,16 +56,20 @@ body {
 .fontX {
   font-family: "JosefinSans";
   font-weight: bold;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.432), rgba(255, 255, 255, 0.454)); /* Gradient from black to white */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.432), rgba(255, 255, 255, 0.454));
+  /* Gradient from black to white */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Makes the text fill color transparent */
+  -webkit-text-fill-color: transparent;
+  /* Makes the text fill color transparent */
   font-size: 200px;
+  margin-top: -200px;
 }
 
 
-.logoX{
+.logoX {
   position: absolute;
-  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5)); /* Larger shadow with more blur */
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+  /* Larger shadow with more blur */
 }
 
 #scene-container {
@@ -75,6 +79,7 @@ body {
 }
 
 .horizontal-sections {
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   width: 600vw;
@@ -87,33 +92,83 @@ body {
   flex-shrink: 0;
 }
 
+.mobileX {
+  display: none;
+  width: 100vw;
+}
 
-@media only screen and (min-width: 767px){
-  
-  .mobileX{
-    display: none;
+.mobileX1 {
+  display: none;
+  width: 100vw;
+}
+
+@media (max-width: 1032px) {
+
+  .fontX {
+    font-size: 140px;
   }
+
 
 }
 
-@media only screen and (max-width: 767px){
-  
+
+
+@media (max-width: 768px) {
+
   #scene-container {
-    width: 80%;
-    height: 80vh;
+    width: 90%;
+    height: 90vh;
     /* Full viewport height */
   }
 
-  .mobileX{
-    display: visible;
+  .mobileX {
+    display: block;
+  }
+
+  .mobileX1 {
+    display: block;
   }
 
   .horizontal-sections {
     display: none;
   }
 
+  .horizontal-section {
+    display: none;
+  }
+
   .fontX {
-    margin-top: -200px;
+    font-weight: bold;
+    font-size: 100px;
+  }
+
+}
+
+@media (max-width: 430px) {
+
+  #scene-container {
+    width: 80%;
+    height: 80vh;
+    /* Full viewport height */
+  }
+
+  .mobileX {
+    display: block;
+  }
+
+  .mobileX1 {
+    display: block;
+  }
+
+  .horizontal-sections {
+    display: none;
+  }
+
+  .horizontal-section {
+    display: none;
+  }
+
+  .fontX {
     font-weight: bold;
     font-size: 40px;
   }
