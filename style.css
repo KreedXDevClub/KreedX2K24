@@ -102,6 +102,15 @@ body {
   width: 100vw;
 }
 
+@media (max-width: 1450px) {
+
+  .fontX {
+    font-size: 170px;
+  }
+
+
+}
+
 @media (max-width: 1032px) {
 
   .fontX {
