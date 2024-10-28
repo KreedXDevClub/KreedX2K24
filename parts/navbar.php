@@ -2,7 +2,20 @@
     <style>
         /* Navbar background gradient */
 
+        .navbar{
+            z-index: 1;
+        }
 
+        .navlogo {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .navlogo:hover {
+            transform: scale(1.05);
+            /* Slightly enlarges the image on hover */
+            filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3));
+            /* Adds shadow directly to the image */
+        }
         .navbar-custom {
             background: transparent;
             position: fixed;
@@ -36,7 +49,7 @@
 <nav class="navbar navbar-expand-lg navbar-custom p-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="logo/main2.png" alt="Logo" />
+            <img src="logo/main2.png" class="navlogo" alt="Logo" />
         </a>
         <button
             class="navbar-toggler"

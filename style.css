@@ -70,6 +70,14 @@ body {
   position: absolute;
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
   /* Larger shadow with more blur */
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.logoX:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3)); /* Adds shadow directly to the image */
 }
 
 #scene-container {
@@ -102,6 +110,10 @@ body {
   width: 100vw;
 }
 
+.navbarPCM{
+  display: none;
+}
+
 @media (max-width: 1450px) {
 
   .fontX {
@@ -124,6 +136,17 @@ body {
 
 @media (max-width: 768px) {
 
+  body{
+    overflow-x: hidden;
+  }
+
+  .navbarPCM{
+    display: block;
+  }
+
+  .navbarPC{
+    display: none;
+  }
   #scene-container {
     width: 90%;
     height: 90vh;

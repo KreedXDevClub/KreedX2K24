@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Three.js GLB Model</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -15,9 +16,14 @@
 </head>
 
 <body class="m-0 p-0">
-  <div class="col-12">
+  <div class="col-12 navbarPC">
     <?php
     include "parts/navbar.php"
+    ?>
+  </div>
+  <div class="col-12 navbarPCM" style="z-index: 1;">
+    <?php
+    include "parts/mobileNav.php"
     ?>
   </div>
 
@@ -29,9 +35,9 @@
           <h1 class="fontX animate__animated animate__fadeInDown">WELCOME TO</h1>
         </div>
         <div class="col-12 d-flex justify-content-center align-items-center logoX">
-          <img src="logo/main2.png" class="logoX col-lg-6 col-10 animate__animated animate__fadeInUp animate__delay-3s" />
+          <img src="logo/main2.png" class="logoX logoX2 col-lg-6 col-10 wow animate__animated animate__fadeInUp" data-wow-delay="1.4s" />
         </div>
-        <div class="animate__animated animate__fadeIn animate__delay-2s col-12 d-flex justify-content-center align-items-center" style="z-index: -1;">
+        <div class="col-12 d-flex justify-content-center align-items-center wow animate__animated animate__fadeIn" data-wow-delay="1.1s" style="z-index: -1;">
           <div id="scene-container" class></div>
         </div>
       </div>
