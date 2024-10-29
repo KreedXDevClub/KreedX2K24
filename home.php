@@ -32,7 +32,7 @@
     <div class="col-12 row m-0 p-0">
       <div class="col-12 m-0 p-0 d-flex justify-content-center align-items-center vh-100 row">
         <div class="col-12 welcomeX d-flex justify-content-center">
-          <h1 class="fontX animate__animated animate__fadeInDown">WELCOME TO</h1>
+          <h1 class="fontX animate__animated animate__fadeInDown" id="welcome">WELCOME TO</h1>
         </div>
         <div class="col-12 d-flex justify-content-center align-items-center logoX">
           <img src="logo/main2.png" class="logoX logoX2 col-lg-6 col-10 wow animate__animated animate__fadeInUp" data-wow-delay="1.4s" />

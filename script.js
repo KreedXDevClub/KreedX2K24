@@ -1,9 +1,14 @@
-const container = document.getElementById('scene-container');
+const container = document.getElementById("scene-container");
 
 // Scene and Camera
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+    75,
+    container.clientWidth / container.clientHeight,
+    0.1,
+    1000
+);
 camera.position.z = 5;
 
 // Renderer
@@ -39,7 +44,7 @@ function createGlowingRedMaterial() {
 // GLTF Loader
 const loader = new THREE.GLTFLoader();
 loader.load(
-    'object/cubeX/scene.gltf',
+    "object/cubeX/scene.gltf",
     (gltf) => {
         gltfModel = gltf.scene;
         gltfModel.scale.set(1, 1, 1);
@@ -54,7 +59,8 @@ loader.load(
                 node.receiveShadow = true;
 
                 // Apply glowing red material based on identified name
-                if (node.name === "MiniCube") { // Update "MiniCube" to the correct name if necessary
+                if (node.name === "MiniCube") {
+                    // Update "MiniCube" to the correct name if necessary
                     node.material = createGlowingRedMaterial();
                 } else {
                     node.material = new THREE.MeshStandardMaterial({
@@ -72,8 +78,8 @@ loader.load(
             gltf.animations.forEach((clip) => mixer.clipAction(clip).play());
         }
     },
-    (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
-    (error) => console.error('An error occurred:', error)
+    (xhr) => console.log((xhr.loaded / xhr.total) * 100 + "% loaded"),
+    (error) => console.error("An error occurred:", error)
 );
 
 // Mouse interaction variables
@@ -81,7 +87,7 @@ const mouse = new THREE.Vector2();
 const mouseInfluence = 0.02;
 
 // Mouse event for rotation
-window.addEventListener('mousemove', (event) => {
+window.addEventListener("mousemove", (event) => {
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     if (gltfModel) {
@@ -102,8 +108,14 @@ function animate() {
 animate();
 
 // Resize handling
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
 });
+
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementById("welcome").textContent = "GET STARTED WITH";
+    }, 3000); // 3000 milliseconds = 3 seconds
+};
