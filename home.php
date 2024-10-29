@@ -88,20 +88,20 @@
   <!-- Horizontal Scroll Container -->
   <div class="horizontal-sections">
 
-    <section class="section horizontal-section">
+    <section id="sec1" class="section horizontal-section">
       <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Hello World</h1>
       </div>
     </section>
 
 
-    <section class="section horizontal-section">
+    <section id="sec2" class="section horizontal-section">
       <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>
     </section>
 
-    <section class="section horizontal-section">
+    <section id="sec3" class="section horizontal-section">
       <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
         <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
       </div>

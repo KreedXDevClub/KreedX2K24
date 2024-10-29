@@ -67,13 +67,16 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#sec1">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#sec2">EduX</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Edu x</a>
+                    <a class="nav-link" href="#sec3">BlogX</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec4">Contact Us</a>
                 </li>
             </ul>
         </div>
