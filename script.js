@@ -117,5 +117,7 @@ window.addEventListener("resize", () => {
 window.onload = function () {
     setTimeout(function () {
         document.getElementById("welcome").textContent = "GET STARTED WITH";
-    }, 3000); // 3000 milliseconds = 3 seconds
+        document.getElementsByClassName("welcome") = "fontX2";
+    }, 3000);
+    // 3000 milliseconds = 3 seconds
 };
