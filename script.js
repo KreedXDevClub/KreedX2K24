@@ -122,3 +122,95 @@ window.onload = function () {
         font.add("fontX2");
     }, 3000);
 };
+
+// Function to create and set up canvas with animation for a given target div
+function createCanvasForDiv(targetDiv) {
+    // Create and append canvas to the target div
+    var canvas = document.createElement("canvas");
+    canvas.style.position = "absolute";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.zIndex = -2;
+    targetDiv.appendChild(canvas);
+    var context = canvas.getContext("2d");
+
+    // Define variables specific to this canvas
+    var halfx, halfy;
+    var dotCount = 200;
+    var dots = [];
+
+    // Function to resize canvas and update dimensions
+    function resizeCanvas() {
+        canvas.width = targetDiv.clientWidth;
+        canvas.height = targetDiv.clientHeight;
+        halfx = canvas.width / 2;
+        halfy = canvas.height / 2;
+    }
+
+    // Call resizeCanvas initially and on window resize
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    // Initialize dots
+    for (var i = 0; i < dotCount; i++) {
+        dots.push(new Dot());
+    }
+
+    function render() {
+        // Create a red-to-black gradient background
+        const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+        gradient.addColorStop(0, "rgb(154, 0, 0)");
+        gradient.addColorStop(0.25, "rgb(112, 0, 0)");
+        gradient.addColorStop(0.5, "rgb(48, 0, 0)");
+        gradient.addColorStop(0.75, "rgb(16, 0, 0)");
+        gradient.addColorStop(1, "black");
+
+        // Set the gradient as the fill style and apply it
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Render each dot
+        for (var i = 0; i < dotCount; i++) {
+            dots[i].draw(context, halfx, halfy);
+            dots[i].move();
+        }
+        requestAnimationFrame(render);
+    }
+
+    // Dot class definition
+    function Dot() {
+        this.rad_x = 2 * Math.random() * halfx + 1;
+        this.rad_y = 1.2 * Math.random() * halfy + 1;
+        this.alpha = Math.random() * 360 + 1;
+        this.speed = Math.random() * 100 < 50 ? 1 : -1;
+        this.speed *= 0.1;
+        this.size = Math.random() * 5 + 1;
+        this.color = Math.floor(Math.random() * 256);
+    }
+
+    Dot.prototype.draw = function (context, halfx, halfy) {
+        var dx = halfx + this.rad_x * Math.cos((this.alpha / 180) * Math.PI);
+        var dy = halfy + this.rad_y * Math.sin((this.alpha / 180) * Math.PI);
+        context.fillStyle = "rgb(" + this.color + "," + this.color + "," + this.color + ")";
+        context.fillRect(dx, dy, this.size, this.size);
+    };
+
+    Dot.prototype.move = function () {
+        this.alpha += this.speed;
+        if (Math.random() * 100 < 50) {
+            this.color += 1;
+        } else {
+            this.color -= 1;
+        }
+    };
+
+    // Start animation for this canvas
+    render();
+}
+
+// Apply animation to both divX and divX2
+var divX = document.querySelector(".divX");
+var divX2 = document.querySelector(".divX2");
+createCanvasForDiv(divX);
+createCanvasForDiv(divX2);
+

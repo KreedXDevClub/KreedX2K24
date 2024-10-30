@@ -14,6 +14,20 @@ body {
   );
 }
 
+.divX {
+  background: linear-gradient(to right, rgb(154, 0, 0), rgb(112, 0, 0), rgb(48, 0, 0), rgb(16, 0, 0), black);
+}
+
+.divX2 {
+  background: linear-gradient(to right, rgb(154, 0, 0), rgb(112, 0, 0), rgb(48, 0, 0), rgb(16, 0, 0), black);
+}
+
+.bottomX{
+  background: linear-gradient(to right, rgb(20, 0, 0), black);;
+}
+
+
+
 /* Make the scrollbar invisible */
 ::-webkit-scrollbar {
   width: 0;
@@ -70,7 +84,7 @@ body {
   -webkit-text-fill-color: transparent;
   /* Makes the text fill color transparent */
   font-size: 200px;
-  margin-top: -200px;
+  margin-top: -250px;
 }
 
 .fontX2 {
@@ -86,8 +100,19 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Makes the text fill color transparent */
-  margin-top: -200px;
+  margin-top: -250px;
 }
+
+.fontX3 {
+  position: absolute;
+  font-size: 30px;
+  font-family: "JosefinSans";
+  font-weight: bold;
+  color: white;
+  /* Makes the text fill color transparent */
+  margin-top: 640px;
+}
+
 
 .logoX {
   position: absolute;
@@ -114,7 +139,7 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
-  width: 600vw;
+  width: 300vw;
   /* Total width for two sections */
   transform: translate3d(0, 0, 0);
 }
@@ -146,6 +171,11 @@ body {
   .fontX2 {
     font-size: 125px;
   }
+
+  .fontX3 {
+    font-size: 25px;
+    margin-top: 580px;
+  }
 }
 
 @media (max-width: 1032px) {
@@ -154,7 +184,12 @@ body {
   }
 
   .fontX2 {
-    font-size: 110px;
+    font-size: 100px;
+  }
+
+  .fontX3 {
+    font-size: 20px;
+    margin-top: 580px;
   }
 }
 
@@ -200,12 +235,18 @@ body {
   .fontX2 {
     font-size: 70px;
   }
+
+  .fontX3 {
+    font-size: 18px;
+    margin-top: 490px;
+  }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
   #scene-container {
     width: 80%;
     height: 80vh;
+    margin-top: -50px;
     /* Full viewport height */
   }
 
@@ -232,6 +273,11 @@ body {
 
   .fontX2 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
+  }
+
+  .fontX3 {
+    font-size: 20px;
+    margin-top: 650px;
   }
 }

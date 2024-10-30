@@ -16,6 +16,8 @@
 </head>
 
 <body class="m-0 p-0">
+
+
   <div class="col-12 navbarPC">
     <?php
     include "parts/navbar.php"
@@ -28,11 +30,14 @@
   </div>
 
   <!-- Main Section -->
-  <section id="Home" class="section">
+  <section id="sec" class="section">
     <div class="col-12 row m-0 p-0">
       <div class="col-12 m-0 p-0 d-flex justify-content-center align-items-center vh-100 row">
         <div class="col-12 welcomeX d-flex justify-content-center">
           <h1 class="fontX animate__animated animate__fadeInDown" id="welcome">WELCOME TO</h1>
+        </div>
+        <div class="col-12 welcomeX2 d-flex justify-content-center">
+          <h1 class="fontX3 text-center animate__animated animate__fadeInDown p-3" id="welcome">Your Gateway to Innovative Web Development and Software Solutions</h1>
         </div>
         <div class="col-12 d-flex justify-content-center align-items-center logoX">
           <img src="logo/main2.png" class="logoX logoX2 col-lg-6 col-10 wow animate__animated animate__fadeInUp" data-wow-delay="1.4s" />
@@ -42,91 +47,85 @@
         </div>
       </div>
     </div>
+    <div class="col-12 vh-100 divX d-flex justify-content-center align-items-center border border-5 border-warning">
+
+      <h1 class="col-12 text-center fs-1" style="color:white;">About Us</h1>
+
+    </div>
   </section>
 
 
-  <div class="col-12 mobileX vh-100 m-0 p-0">
 
-    <section class="col-12 p-0">
+
+  <div class="col-12 m-0 p-0 mobileX">
+
+    <section class="col-12 p-0" id="sec1">
       <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Hello MF</h1>
+        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Portfolio</h1>
+      </div>
+    </section>
+
+    <section class="col-12 p-0" id="sec2">
+      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
+        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">EduX</h1>
       </div>
     </section>
 
 
-    <section class="col-12 p-0">
+    <section class="col-12 p-0" id="sec3">
       <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
+        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">BlogX</h1>
       </div>
     </section>
 
-    <section class="col-12 p-0">
+    <section class="col-12 p-0" id="sec4">
       <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
+        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Contact Us</h1>
       </div>
     </section>
 
-    <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
-      </div>
-    </section>
-
-    <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
-      </div>
-    </section>
-
-    <section class="col-12 p-0">
-      <div class="col-12 border border-5 border-warning mobileX1 vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
-      </div>
-    </section>
   </div>
 
+
+
   <!-- Horizontal Scroll Container -->
-  <div class="horizontal-sections">
+  <div class="horizontal-sections divX2">
 
     <section id="sec1" class="section horizontal-section">
       <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Hello World</h1>
+        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">Portfolio</h1>
       </div>
     </section>
 
 
     <section id="sec2" class="section horizontal-section">
       <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
+        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">EduX</h1>
       </div>
     </section>
 
     <section id="sec3" class="section horizontal-section">
       <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
+        <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">BlogX</h1>
       </div>
     </section>
 
-    <section class="section horizontal-section">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
-      </div>
-    </section>
-
-    <section class="section horizontal-section">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
-      </div>
-    </section>
-
-    <section class="section horizontal-section">
-      <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-centerwow animate__animated animate__bounceInUp" data-wow-duration="2s" data-wow-delay="1s" style="color: white;">It's worked</h1>
-      </div>
-    </section>
   </div>
 
-  
+  <section id="sec4" class="bottomX">
+    <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <h1 class="fs1 text-center" style="color: white;">Contact Us</h1>
+    </div>
+  </section>
+
+  <section id="sec5" class="bottomX">
+    <div class="col-12 border border-5 border-warning vh-100 d-flex justify-content-center align-items-center">
+      <h1 class="fs1 text-center" style="color: white;">Footer</h1>
+    </div>
+  </section>
+
+
+
 
   <!-- GSAP and Three.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
