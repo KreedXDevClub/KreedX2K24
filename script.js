@@ -241,18 +241,6 @@ document.querySelectorAll('.menu-links a').forEach(link => {
 });
 
 
-// Smooth scrolling for all anchor links
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        gsap.to(window, {
-            duration: 2, // Adjust duration for slower/faster scrolling
-            scrollTo: this.getAttribute("href"),
-            ease: "power2.out" // Easing for smooth effect
-        });
-    });
-});
-
 
 new WOW().init();
 
