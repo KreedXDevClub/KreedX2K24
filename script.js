@@ -116,10 +116,22 @@ window.addEventListener("resize", () => {
 
 window.onload = function () {
     setTimeout(function () {
-        document.getElementById("welcome").textContent = "GET STARTED WITH";
-        const font = document.getElementById("welcome").classList;
-        font.remove("fontX");
-        font.add("fontX2");
+        const welcomeEl = document.getElementById("welcome");
+
+        // Add fadeOut classes to fade out "WELCOME"
+        welcomeEl.classList.add("animate__animated", "animate__fadeOut");
+
+        // Wait for the fade-out animation to complete
+        setTimeout(() => {
+            // Change the text and font class
+            welcomeEl.textContent = "GET STARTED WITH";
+            welcomeEl.classList.remove("fontX");
+            welcomeEl.classList.add("fontX2");
+
+            // Add fadeIn classes to fade in "GET STARTED"
+            welcomeEl.classList.remove("animate__fadeOut"); // Remove fadeOut class
+            welcomeEl.classList.add("animate__fadeIn");
+        }, 1000); // Match this duration to your fade-out duration (2s in this case)
     }, 3000);
 };
 
@@ -214,3 +226,54 @@ var divX2 = document.querySelector(".divX2");
 createCanvasForDiv(divX);
 createCanvasForDiv(divX2);
 
+
+
+function toggleMenu() {
+    document.querySelector('.menu-overlay').classList.toggle('active');
+}
+
+// Set the background images for each nav link based on data-image attribute
+document.querySelectorAll('.menu-links a').forEach(link => {
+    const imageUrl = link.getAttribute('data-image');
+    if (imageUrl) {
+        link.style.backgroundImage = `url(${imageUrl})`;
+    }
+});
+
+
+// Smooth scrolling for all anchor links
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        gsap.to(window, {
+            duration: 2, // Adjust duration for slower/faster scrolling
+            scrollTo: this.getAttribute("href"),
+            ease: "power2.out" // Easing for smooth effect
+        });
+    });
+});
+
+
+new WOW().init();
+
+gsap.registerPlugin(ScrollTrigger);
+
+if (window.innerWidth > 768) {
+    gsap.to(".horizontal-sections", {
+        x: () => -(document.querySelector(".horizontal-sections").offsetWidth - window.innerWidth),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal-sections",
+            start: "top top",
+            end: () => `+=${document.querySelector(".horizontal-sections").offsetWidth - window.innerWidth}`,
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+        }
+    });
+}
+
+window.addEventListener("load", () => {
+    document.getElementById("loading-screen").classList.add("hidden");
+});
