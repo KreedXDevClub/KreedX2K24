@@ -1,0 +1,473 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  /* Remove body margin */
+  padding: 0;
+  /* Remove body padding */
+
+  background: linear-gradient(to right,
+      rgb(154, 0, 0),
+      rgb(112, 0, 0),
+      rgb(48, 0, 0),
+      rgb(16, 0, 0),
+      black);
+}
+
+    /* Fade-in effect */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    /* Loading screen styling */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s;
+    }
+
+    #loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Custom loader styling */
+    .loader {
+      transform: rotateZ(45deg);
+      perspective: 1000px;
+      font-weight: bold !important;
+      border-radius: 50%;
+      width: 158px;
+      height: 158px;
+      color: #fff;
+      position: relative;
+    }
+
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+      }
+    }
+
+    @keyframes rotateccw {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+      }
+    }
+
+    @keyframes spin {
+
+      0%,
+      100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+      }
+
+      12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+      }
+
+      25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+      }
+
+      37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+      }
+
+      50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+      }
+
+      62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+      }
+
+      75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+      }
+
+      87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+      }
+    }
+
+.mobileXB {
+  background: linear-gradient(to right, rgb(154, 0, 0), rgb(112, 0, 0), rgb(48, 0, 0), rgb(16, 0, 0), black);
+}
+
+.divX {
+  background: linear-gradient(to right, rgb(154, 0, 0), rgb(112, 0, 0), rgb(48, 0, 0), rgb(16, 0, 0), black);
+}
+
+.divX2 {
+  background: linear-gradient(to right, rgb(154, 0, 0), rgb(112, 0, 0), rgb(48, 0, 0), rgb(16, 0, 0), black);
+}
+
+.bottomX {
+  background: linear-gradient(to right, rgb(20, 0, 0), black);
+  ;
+}
+
+
+
+/* Make the scrollbar invisible */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Make the scrollbar track invisible */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Make the scrollbar thumb invisible */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+  scrollbar-width: none;
+}
+
+.menuIconX {
+  --s: 20px;
+  /* control the size */
+  --c: rgb(92, 39, 39);
+  /* the color */
+
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s)/2) solid #0000;
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+  background:
+    var(--_g2) left var(--_p, 0px) top,
+    var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+  background-size:
+    20% 80%,
+    40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
+  cursor: pointer;
+  transition:
+    background-position .3s var(--_s, .3s),
+    clip-path 0s var(--_s, .6s);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.menuIconX:before,
+.menuIconX:after {
+  content: "";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform .3s calc(.3s - var(--_s, .3s));
+}
+
+.menuIconX:checked {
+  clip-path: inset(0);
+  --_p: calc(-1*var(--s));
+  --_s: 0s;
+}
+
+.menuIconX:checked:before {
+  transform: rotate(45deg);
+}
+
+.menuIconX:checked:after {
+  transform: rotate(-45deg);
+}
+
+.menuIconX:focus-visible {
+  clip-path: none;
+  -webkit-mask: none;
+  border: none;
+  outline: 1px solid var(--c);
+}
+
+.welcomeX {
+  position: absolute;
+  z-index: -1;
+  margin-top: -300px;
+}
+
+@font-face {
+  font-family: "SFDistantGalaxyOutline";
+  src: url("fonts/SFDistans/SFDistantGalaxyOutline.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans";
+  src: url("fonts/JosefinSans/JosefinSans-Regular.ttf");
+}
+
+.fontX {
+  font-family: "JosefinSans";
+  font-weight: bold;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.432),
+      rgba(255, 255, 255, 0.454));
+  /* Gradient from black to white */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Makes the text fill color transparent */
+  font-size: 200px;
+  margin-top: -250px;
+}
+
+.fontX2 {
+  font-size: 150px;
+  font-family: "JosefinSans";
+  font-weight: bold;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.432),
+      rgba(255, 255, 255, 0.454));
+  /* Gradient from black to white */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Makes the text fill color transparent */
+  margin-top: -250px;
+}
+
+.fontX3 {
+  position: absolute;
+  font-size: 30px;
+  font-family: "JosefinSans";
+  font-weight: bold;
+  color: white;
+  /* Makes the text fill color transparent */
+  margin-top: 640px;
+}
+
+
+.logoX {
+  position: absolute;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+  /* Larger shadow with more blur */
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoX:hover {
+  transform: scale(1.05);
+  /* Slightly enlarges the image on hover */
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3));
+  /* Adds shadow directly to the image */
+}
+
+#scene-container {
+  width: 100%;
+  height: 100vh;
+  /* Full viewport height */
+}
+
+.horizontal-sections {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 300vw;
+  /* Total width for two sections */
+  transform: translate3d(0, 0, 0);
+}
+
+.horizontal-section {
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+.mobileX {
+  display: none;
+  width: 100vw;
+}
+
+.mobileX1 {
+  display: none;
+  width: 100vw;
+}
+
+.navbarPCM {
+  display: none;
+}
+
+
+
+@media (max-width: 1450px) {
+  .fontX {
+    font-size: 170px;
+  }
+
+  .fontX2 {
+    font-size: 125px;
+  }
+
+  .fontX3 {
+    font-size: 25px;
+    margin-top: 580px;
+  }
+}
+
+@media (max-width: 1032px) {
+  .fontX {
+    font-size: 140px;
+  }
+
+  .fontX2 {
+    font-size: 100px;
+  }
+
+  .fontX3 {
+    font-size: 20px;
+    margin-top: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbarPCM {
+    display: block;
+  }
+
+  .navbarPC {
+    display: none;
+  }
+
+  #scene-container {
+    width: 90%;
+    height: 90vh;
+    /* Full viewport height */
+  }
+
+  .mobileX {
+    display: block;
+  }
+
+  .mobileX1 {
+    display: block;
+  }
+
+  .horizonX {
+    display: none;
+  }
+
+  .horizontal-section {
+    display: none;
+  }
+
+  .fontX {
+    font-weight: bold;
+    font-size: 100px;
+  }
+
+  .fontX2 {
+    font-size: 70px;
+  }
+
+  .fontX3 {
+    font-size: 18px;
+    margin-top: 490px;
+  }
+}
+
+@media (max-width: 440px) {
+  #scene-container {
+    width: 80%;
+    height: 80vh;
+    margin-top: -50px;
+    /* Full viewport height */
+  }
+
+  .mobileX {
+    display: block;
+  }
+
+  .mobileX1 {
+    display: block;
+  }
+
+  .horizontal-sections {
+    display: none;
+  }
+
+  .horizontal-section {
+    display: none;
+  }
+
+  .fontX {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  .fontX2 {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .fontX3 {
+    font-size: 20px;
+    margin-top: 650px;
+  }
+}
