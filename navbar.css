@@ -86,6 +86,7 @@ body {
 
 /* Horizontal Navigation Links with Square Background Images */
 .menu-links {
+    width: 80vw;
     list-style: none;
     margin-top: 30px;
     padding: 0;
@@ -185,6 +186,20 @@ body {
 .floating-particles::after {
     animation-delay: 10s;
 }
+
+.fade-in-out {
+    animation: fadeEffect 0.4s ease;
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 @keyframes floatingParticles {
     from {

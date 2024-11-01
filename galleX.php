@@ -25,7 +25,7 @@
 
         <div class="col-12 row m-0 p-0 d-flex justify-content-center">
 
-            <div class="col-12 d-flex justify-content-center titleX">
+            <div class="col-12 d-flex justify-content-center titleX p-4 p-lg-0">
                 <h1 class="menu-title">
                     <a class="galleryImgX titleX" href="home.php"><img class="logoX" src="./logo/main2.png" alt=""></a>
                 </h1>
@@ -83,14 +83,14 @@
                 autoplayTimeout: 3000,
                 autoplayHoverPause: true,
                 responsive: {
-                    0: {
-                        items: 2
+                    500: {
+                        items: 2 // Mobile size
                     },
-                    600: {
-                        items: 4
+                    800: {
+                        items: 4 // Tablet size
                     },
                     1000: {
-                        items: 6
+                        items: 6 // Desktop size
                     }
                 }
             });
@@ -104,14 +104,14 @@
                 autoplayHoverPause: true,
                 rtl: true,
                 responsive: {
-                    0: {
-                        items: 2
+                    500: {
+                        items: 2 // Mobile size
                     },
-                    600: {
-                        items: 4
+                    800: {
+                        items: 4 // Tablet size
                     },
                     1000: {
-                        items: 6
+                        items: 6 // Desktop size
                     }
                 }
             });

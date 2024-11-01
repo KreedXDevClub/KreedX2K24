@@ -251,7 +251,7 @@ body {
     }
 
     .titleX {
-        margin-top: 50px;
+        margin-top: 100px;
     }
 
     .titleX2 {
@@ -301,17 +301,21 @@ body {
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 435px) {
     .galleryText {
-        font-size: 18px;
+        font-size: 25px;
     }
 
-    .galleryImgX {
-        width: 30vh;
+    .logoX {
+        width: 80vw;
     }
 
     body {
         overflow: hidden;
+    }
+
+    .titleX {
+        margin-top: 25px;
     }
 
     .mfp-content {
@@ -322,6 +326,40 @@ body {
     .mfp-img {
         max-width: 95vw;
         max-height: 65vh;
+    }
+
+    /* Reduce the wrap padding */
+    .mfp-wrap {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 365px) {
+    .galleryText {
+        font-size: 20px;
+    }
+
+    .logoX {
+        width: 80vw;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .titleX {
+        margin-top: 5px;
+    }
+
+    .mfp-content {
+        width: 85vw;
+        /* Slightly increase width for very small screens */
+    }
+
+    .mfp-img {
+        max-width: 85vw;
+        max-height: 55vh;
     }
 
     /* Reduce the wrap padding */

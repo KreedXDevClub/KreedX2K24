@@ -148,7 +148,7 @@ body {
 }
 
 .bottomX {
-  background: linear-gradient(to right, rgb(20, 0, 0), black);
+  background: linear-gradient(to right, rgb(16, 0, 0), black);
   ;
 }
 
@@ -180,6 +180,7 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: none;
 }
+
 
 .menuIconX {
   --s: 20px;
