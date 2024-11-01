@@ -326,7 +326,7 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
-  width: 300vw;
+  width: 400vw;
   /* Total width for two sections */
   transform: translate3d(0, 0, 0);
 }

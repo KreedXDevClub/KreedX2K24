@@ -118,6 +118,13 @@
         </div>
       </section>
 
+      <section id="sec3" class="section horizontal-section">
+        <div class="col-12    vh-100 d-flex justify-content-center align-items-center">
+          <h1 class="fs1 text-center wow animate__animated animate__bounceInUp" data-wow-duration="2s"
+            data-wow-delay="1s" style="color: white;">Gallex</h1>
+        </div>
+      </section>
+
     </div>
 
     <section id="sec4" class="bottomX">
@@ -126,13 +133,13 @@
       </div>
     </section>
 
-    <section id="sec5" class="bottomX">
-      <div class="col-12    vh-100 d-flex justify-content-center align-items-center">
-        <h1 class="fs1 text-center" style="color: white;">Footer</h1>
-      </div>
-    </section>
-
   </div>
+
+  <section id="sec5" class="bottomX">
+    <div class="col-12    vh-100 d-flex justify-content-center align-items-center">
+      <h1 class="fs1 text-center" style="color: white;">Footer</h1>
+    </div>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>

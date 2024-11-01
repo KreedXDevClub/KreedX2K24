@@ -22,7 +22,9 @@
                 <li><a href="#" data-image="images/portfolio.jpg">Portfolio</a></li>
                 <li><a href="#" data-image="images/edux.jpg">EduX</a></li>
                 <li><a href="#" data-image="images/blogx.jpg">BlogX</a></li>
+                <li><a href="./galleX.php" data-image="images/gallex.jpg">GalleX</a></li>
                 <li><a href="#sec4" data-image="images/contactx.jpg">Contact</a></li>
+                
             </ul>
         </div>
     </div>
