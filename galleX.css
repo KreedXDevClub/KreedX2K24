@@ -1,0 +1,370 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Loading screen styling */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Custom loader styling */
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    font-weight: bold !important;
+    border-radius: 50%;
+    width: 158px;
+    height: 158px;
+    color: #fff;
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+
+
+/* Background Gradient and Floating Particles */
+.background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: linear-gradient(135deg, #1a0000, #3b0000, #000000);
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 1%, transparent 20%);
+    transform: translate(-50%, -50%) scale(0.8);
+    animation: floatingParticles 20s linear infinite;
+    z-index: 0;
+}
+
+.floating-particles::after {
+    animation-delay: 10s;
+}
+
+@keyframes floatingParticles {
+    from {
+        transform: translate(0, 0) scale(0.8);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.carouselX-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.owl-carousel .item {
+    margin: 0 5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.owl-carousel .item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.owl-carousel .item img:hover {
+    transform: scale(1.1);
+}
+
+.mfp-img {
+    max-width: 100%;
+    /* Full width within container */
+    max-height: 80vh;
+    /* Prevents image from exceeding viewport height */
+    object-fit: contain;
+    /* Ensures the image scales without distortion */
+}
+
+/* Popup container adjustments for small screens */
+.mfp-wrap {
+    top: 0;
+    padding: 5px;
+    /* Minimizes padding on smaller screens */
+    overflow: hidden;
+    /* Prevents overflow on mobile */
+}
+
+.titleX {
+    margin-top: 50px;
+}
+
+.logoX {
+    z-index: 9999;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+    /* Larger shadow with more blur */
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoX:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the image on hover */
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3));
+    /* Adds shadow directly to the image */
+}
+
+@media (max-width: 1450px) {
+
+    .galleryText {
+        font-size: 1.5rem;
+    }
+
+    .galleryImgX {
+        width: 30vw;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .titleX {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1032px) {
+    .galleryText {
+        font-size: 1.5rem;
+    }
+
+    .galleryImgX {
+        width: 250px;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .titleX {
+        margin-top: 100px;
+    }
+
+    .titleX2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 769px) {
+    .galleryText {
+        font-size: 20px;
+    }
+
+    .galleryImgX {
+        width: 40vw;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .mfp-content {
+        width: 90vw;
+        /* Constrain popup width to viewport width */
+        max-width: 90vw;
+        /* Max width to fit smaller screens */
+        margin: 0 auto;
+        /* Center content */
+    }
+
+    .mfp-img {
+        max-width: 90vw;
+        /* Adjusts image width for smaller screens */
+        max-height: 70vh;
+        /* Limits height to avoid overflow */
+    }
+
+    .mfp-container {
+        padding: 0;
+    }
+
+    .titleX {
+        margin-top: 40px;
+    }
+
+    .titleX2 {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 435px) {
+    .galleryText {
+        font-size: 25px;
+    }
+
+    .logoX {
+        width: 80vw;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .titleX {
+        margin-top: 25px;
+    }
+
+    .mfp-content {
+        width: 95vw;
+        /* Slightly increase width for very small screens */
+    }
+
+    .mfp-img {
+        max-width: 95vw;
+        max-height: 65vh;
+    }
+
+    /* Reduce the wrap padding */
+    .mfp-wrap {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 365px) {
+    .galleryText {
+        font-size: 20px;
+    }
+
+    .logoX {
+        width: 80vw;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .titleX {
+        margin-top: 5px;
+    }
+
+    .mfp-content {
+        width: 85vw;
+        /* Slightly increase width for very small screens */
+    }
+
+    .mfp-img {
+        max-width: 85vw;
+        max-height: 55vh;
+    }
+
+    /* Reduce the wrap padding */
+    .mfp-wrap {
+        padding: 0;
+    }
+
+}
